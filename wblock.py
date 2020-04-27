@@ -1,5 +1,5 @@
 
-class Block:
+class Block: 
     def __init__(self,sender, reciever):
         self.sender = sender
         self.reciever = reciever
@@ -31,6 +31,7 @@ class Message_Chain():
         self.message_chain =[x]
     
     def msg_flag(self, msg, reciever):
+        #dummy function for prototyping 
         return None
     
     def add_message_link(self, msg, sender, reciever):
@@ -53,29 +54,28 @@ class Message_Chain():
     
     
 if __name__ == '__main__':
-    
-    
-        
-dd = Message_Chain('x hai', 914, 332)
+            
+    dd = Message_Chain('x hai', 914, 332)
 
-dd.add_message_link('x hai', 432, 331)
+    dd.add_message_link('x hai', 432, 331)
 
-dd.add_message_link('x hai', 33, 331)
+    dd.add_message_link('x hai', 33, 331)
 
-dd.add_message_link('x nahi hai', 4312, 331)
+    dd.add_message_link('x nahi hai', 4312, 331)
 
-dd.add_message_link('x hai', 432, 3331)
+    dd.add_message_link('x hai', 432, 3331)
 
-dd.add_message_link('x nahi hai', 3722, 9393)
+    dd.add_message_link('x nahi hai', 3722, 9393)
 
-
-
-itr = dd.message_chain[1].head 
-while  itr != None:
-    print(itr)
-    itr = itr.next
+    itr = dd.message_chain[1].head 
+    while  itr != None:
+        print(itr)
+        itr = itr.next
     
         
+
+    
+    
         
     
     
