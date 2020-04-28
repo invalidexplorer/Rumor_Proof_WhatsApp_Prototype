@@ -1,5 +1,5 @@
 
-class Block: 
+class Block: #Node
     def __init__(self,sender, reciever):
         self.sender = sender
         self.reciever = reciever
@@ -9,10 +9,10 @@ class Block:
         return f'Sender: {self.sender} Reciever: {self.reciever}'
     
 
-class Message_link:
+class Message_link: #link list
     def __init__(self,messageID):
         self.head = None
-        self.messageID = messageID
+        self.messageID = messageID #messageID to identify each ll with
     def __str__(self):
         return f'Message: {self.messageID}'
     
@@ -55,17 +55,17 @@ class Message_Chain():
     
 if __name__ == '__main__':
             
-    dd = Message_Chain('x hai', 914, 332)
+    dd = Message_Chain('x', 914, 332)
 
-    dd.add_message_link('x hai', 432, 331)
+    dd.add_message_link('x', 432, 331)
 
-    dd.add_message_link('x hai', 33, 331)
+    dd.add_message_link('Y', 33, 331)
 
-    dd.add_message_link('x nahi hai', 4312, 331)
+    dd.add_message_link('Y', 4312, 331)
 
-    dd.add_message_link('x hai', 432, 3331)
+    dd.add_message_link('Z', 432, 3331)
 
-    dd.add_message_link('x nahi hai', 3722, 9393)
+    dd.add_message_link('Z', 3722, 9393)
 
     itr = dd.message_chain[1].head 
     while  itr != None:
